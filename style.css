@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+ padding:0px 50px;
+}
+
+
+h3{
+ 
+  margin-top: 160px;
+  text-align: center;
+}
+
+@keyframes slideright {
+  from {
+      background-position: 0%;
+  }
+  to {
+      background-position: 70000%;
+  }
+}
+
+
+#game{
+  background-image: url(/background.png);
+  max-width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 25vh;
+  animation: slideright 100s infinite linear;
+  /* -webkit-animation: slideright 500s infinite linear; */
+}
+
+
+#dino{
+  content: url(/dino.png);
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  position: relative;
+  top:150px;
+}
+
+
+
+.animar{
+   animation: dino 500ms infinite ;
+}
+
+@keyframes dino{
+  0%{top:150px;}
+  30%{top:100px;}
+  70%{top:100px;}
+  150%{top:150px;}
+
+}
+
+@keyframes cacto{
+  0%{left:480px;}
+  100%{left:-10px;}
+}
+
+#cacto{
+  content: url(/cactus.png);
+  width: 20px;
+  height: 20px;
+  
+  position: relative;
+  top: 130px;
+  left: 480px;
+  animation: cacto 3s infinite linear;
+}
+
+
+
+.modal{
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility:hidden;
+ 
+}
+
+.modalContainer{
+  background-color: #fff;
+  max-width: 450px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 5px solid #000;
+}
+
+.modalContainer button{
+  margin-top: 50px;
+  height: 40px;
+  width: 200px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.699);
+  cursor: pointer;
+}
+.modalContainer h2{
+  font-size: 30px;
+  
+}
+.modalContainer button:hover{
+  opacity: 0.8;
+}
